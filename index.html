@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click this!</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #ffebf0;
+            padding: 50px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: inline-block;
+        }
+        h1 {
+            color: #d6336c;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .yes {
+            background-color: #28a745;
+            color: white;
+        }
+        .no {
+            background-color: #dc3545;
+            color: white;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Hi Elai, will you be my Valentine? ❤️</h1>
+        <div class="buttons">
+            <button class="yes" onclick="alert('Yay! See you on February 14. I love you! ❤️')">Yes</button>
+            <button class="no" onmouseover="moveButton()">No</button>
+        </div>
+    </div>
+
+    <script>
+        function moveButton() {
+            const button = document.querySelector(".no");
+            button.style.top = Math.random() * window.innerHeight + "px";
+            button.style.left = Math.random() * window.innerWidth + "px";
+        }
+    </script>
+
+</body>
+</html>
